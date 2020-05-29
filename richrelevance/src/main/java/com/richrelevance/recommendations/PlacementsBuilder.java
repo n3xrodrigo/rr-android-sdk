@@ -1,7 +1,6 @@
 package com.richrelevance.recommendations;
 
-import android.support.annotation.Nullable;
-import android.util.Pair;
+import androidx.annotation.Nullable;
 
 import com.richrelevance.RRLog;
 import com.richrelevance.RequestBuilder;

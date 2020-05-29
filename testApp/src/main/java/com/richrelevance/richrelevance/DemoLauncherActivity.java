@@ -2,15 +2,13 @@ package com.richrelevance.richrelevance;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.richrelevance.Endpoint;
 
 import static com.richrelevance.richrelevance.FindDemo.FindMainActivity.createFindDemoActivityIntent;
 import static com.richrelevance.richrelevance.PreferencesDemo.PreferencesDemoActivity.createPreferencesDemoActivityIntent;

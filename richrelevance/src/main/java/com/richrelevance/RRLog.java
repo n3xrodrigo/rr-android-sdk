@@ -1,6 +1,6 @@
 package com.richrelevance;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 /**
  * Class which mirrors the default Android {@link android.util.Log}, but allows enabling and disabling. All Rich
