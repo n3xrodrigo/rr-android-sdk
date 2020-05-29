@@ -1,27 +1,28 @@
 package com.richrelevance.richrelevance;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class UserChooserActivity extends AppCompatActivity {
 
     public static final String KEY_SELECTED_USER = "KEY_SELECTED_USER";
     private static final String KEY_PRESELECTED_USER = "KEY_PRESELECTED_USER";
 
-    public static Intent createUserChooserActivityIntent(Activity activity, User selectedUser) {
+    public static Intent createUserChooserActivityIntent(AppCompatActivity activity, User selectedUser) {
         Intent intent = new Intent(activity, UserChooserActivity.class);
         Bundle bundle = new Bundle();
         bundle.putParcelable(KEY_PRESELECTED_USER, selectedUser);
@@ -108,7 +109,7 @@ public class UserChooserActivity extends AppCompatActivity {
     private void sendUserChoiceResult(User user) {
         Intent returnIntent = new Intent();
         returnIntent.putExtra(KEY_SELECTED_USER, user);
-        setResult(Activity.RESULT_OK, returnIntent);
+        setResult(AppCompatActivity.RESULT_OK, returnIntent);
         finish();
     }
 }

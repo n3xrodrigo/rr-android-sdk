@@ -3,19 +3,21 @@ package com.richrelevance.richrelevance.FindDemo;
 
 import android.app.Activity;
 import android.content.Intent;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.richrelevance.Callback;
 import com.richrelevance.Error;
 import com.richrelevance.RichRelevance;
@@ -75,7 +77,7 @@ public class SearchActivity extends FindBaseActivity {
 
     private String addToCartParam;
 
-    public static Intent createSearchActivityIntent(Activity activity) {
+    public static Intent createSearchActivityIntent(AppCompatActivity activity) {
         return new Intent(activity, SearchActivity.class);
     }
 

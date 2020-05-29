@@ -1,17 +1,17 @@
 package com.richrelevance.richrelevance.PreferencesDemo;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.richrelevance.Callback;
 import com.richrelevance.Error;
@@ -38,7 +38,7 @@ public class PreferencesDemoActivity extends AppCompatActivity {
     private ProgressBar progressBar;
 
 
-    public static Intent createPreferencesDemoActivityIntent(Activity activity) {
+    public static Intent createPreferencesDemoActivityIntent(AppCompatActivity activity) {
         Intent intent = new Intent(activity, PreferencesDemoActivity.class);
         return intent;
 

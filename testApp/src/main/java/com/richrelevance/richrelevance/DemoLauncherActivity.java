@@ -1,8 +1,6 @@
 package com.richrelevance.richrelevance;
 
-import android.app.Activity;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -10,10 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import static com.richrelevance.richrelevance.FindDemo.FindMainActivity.createFindDemoActivityIntent;
 import static com.richrelevance.richrelevance.PreferencesDemo.PreferencesDemoActivity.createPreferencesDemoActivityIntent;
 
-public class DemoLauncherActivity extends Activity {
+public class DemoLauncherActivity extends AppCompatActivity {
 
     private final String STATE_CLIENT_API_KEY = "STATE_CLIENT_API_KEY";
 

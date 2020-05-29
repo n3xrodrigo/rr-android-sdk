@@ -1,15 +1,16 @@
 package com.richrelevance.richrelevance.FindDemo;
 
-import android.app.Activity;
 import android.content.Intent;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.appcompat.app.ActionBar;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.richrelevance.Callback;
 import com.richrelevance.Error;
 import com.richrelevance.RichRelevance;
@@ -30,7 +31,7 @@ public class FindMainActivity extends FindBaseActivity {
 
     private String addToCartParam;
 
-    public static Intent createFindDemoActivityIntent(Activity activity) {
+    public static Intent createFindDemoActivityIntent(AppCompatActivity activity) {
         Intent intent = new Intent(activity, FindMainActivity.class);
         return intent;
     }

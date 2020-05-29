@@ -1,16 +1,17 @@
 package com.richrelevance.richrelevance.FindDemo;
 
 
-import android.app.Activity;
 import android.content.Intent;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.appcompat.app.ActionBar;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.richrelevance.RichRelevance;
 import com.richrelevance.find.search.SearchResultProduct;
 import com.richrelevance.recommendations.Placement;
@@ -22,7 +23,7 @@ public class CatalogProductDetailActivity extends FindBaseActivity {
     private static final String KEY_PRODUCT = "KEY_PRODUCT";
     private static final String KEY_ADD_TO_CART_PARAMS = "KEY_ADD_TO_CART_PARAMS";
 
-    public static Intent createCatalogProductDetailActivityIntent(Activity activity, SearchResultProduct product, String addToCartParams) {
+    public static Intent createCatalogProductDetailActivityIntent(AppCompatActivity activity, SearchResultProduct product, String addToCartParams) {
         Intent intent = new Intent(activity, CatalogProductDetailActivity.class);
         intent.putExtra(KEY_PRODUCT, product);
         intent.putExtra(KEY_ADD_TO_CART_PARAMS, addToCartParams);

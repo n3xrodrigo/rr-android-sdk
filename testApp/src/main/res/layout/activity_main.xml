@@ -1,5 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="@color/Primary.Light.Sub">
 
@@ -14,7 +15,7 @@
             android:layout_centerInParent="true"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
-            android:src="@drawable/rr_logo"/>
+            app:srcCompat="@drawable/rr_logo"/>
     </RelativeLayout>
 
     <com.richrelevance.richrelevance.PreferencesDemo.view.CardContainer
@@ -44,7 +45,7 @@
         android:background="@drawable/round_button"
         android:onClick="dislike"
         android:scaleType="fitCenter"
-        android:src="@drawable/dislike"/>
+        app:srcCompat="@drawable/dislike"/>
 
     <ImageButton
         android:id="@+id/like"
@@ -56,5 +57,5 @@
         android:background="@drawable/round_button"
         android:onClick="like"
         android:scaleType="fitCenter"
-        android:src="@drawable/like"/>
+        app:srcCompat="@drawable/like"/>
 </FrameLayout>

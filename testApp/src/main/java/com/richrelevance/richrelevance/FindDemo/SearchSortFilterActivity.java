@@ -1,14 +1,9 @@
 package com.richrelevance.richrelevance.FindDemo;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +14,11 @@ import android.widget.CompoundButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import com.richrelevance.find.search.Facet;
 import com.richrelevance.find.search.Filter;
@@ -45,7 +45,7 @@ public class SearchSortFilterActivity extends AppCompatActivity {
     private ArrayAdapter<SearchResultProduct.Field> sortedAdapter;
     private ArrayAdapter<String> filterAdapter;
 
-    public static Intent createSearchSortFilterActivityIntent(Activity activity, ArrayList<Facet> facets) {
+    public static Intent createSearchSortFilterActivityIntent(AppCompatActivity activity, ArrayList<Facet> facets) {
         Intent intent = new Intent(activity, SearchSortFilterActivity.class);
         Bundle bundle = new Bundle();
         bundle.putParcelableArrayList(KEY_FACET_LIST, facets);
@@ -183,7 +183,7 @@ public class SearchSortFilterActivity extends AppCompatActivity {
         returnIntent.putParcelableArrayListExtra(KEY_SELECTED_FILTER_BY, new ArrayList<Parcelable>(selectedFilterBys));
         Bundle bundle = new Bundle();
         bundle.putSerializable(KEY_SELECTED_SORT_ORDER, sortOrder);
-        setResult(Activity.RESULT_OK, returnIntent);
+        setResult(AppCompatActivity.RESULT_OK, returnIntent);
         finish();
     }
 
